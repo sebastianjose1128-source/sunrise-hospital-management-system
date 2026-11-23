@@ -155,18 +155,22 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+
 # Document Events
-# ---------------
-# Hook on document methods and events
+# ----------------
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+# Payment Synchronisation
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "hospital_management.payment_sync.sales_invoice_on_submit",
+        "on_cancel": "hospital_management.payment_sync.sales_invoice_on_cancel"
+    },
 
+    "Payment Entry": {
+        "on_submit": "hospital_management.payment_sync.payment_entry_on_submit",
+        "on_cancel": "hospital_management.payment_sync.payment_entry_on_cancel"
+    }
+}
 # Scheduled Tasks
 # ---------------
 
@@ -279,3 +283,40 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# Sunrise Hospital Fixtures
+fixtures = [
+    {
+        "dt": "Report",
+        "filters": [
+            ["name", "in", [
+                "Doctor Appointment Register",
+                "Patient Admission & Discharge Register",
+                "Medicine Usage Register",
+                "Purchase Order Register"
+            ]]
+        ]
+    },
+    {
+        "dt": "Print Format",
+        "filters": [
+            ["name", "in", [
+                "Sunrise Hospital Appointment Confirmation",
+                "Sunrise Hospital Final Bill",
+                "Sunrise Hospital Discharge Summary"
+            ]]
+        ]
+
+    },
+    {
+        "dt": "Web Form",
+        "filters": [
+            ["name", "=", "book-a-doctor-appointment"]
+        ]
+    },
+    {
+        "dt": "Notification",
+        "filters": [
+            ["name", "=", "Hospital Low Stock Alert"]
+        ]
+    }
+]

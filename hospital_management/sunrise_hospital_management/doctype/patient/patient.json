@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "PAT-.#####",
+ "creation": "2026-11-20 14:54:49.845993",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient_name",
+  "date_of_birth",
+  "gender",
+  "blood_group",
+  "marital_status",
+  "contact_details_section",
+  "mobile_number",
+  "alternate_mobile_number",
+  "email",
+  "address_line1",
+  "address_line2",
+  "city",
+  "state",
+  "pincode",
+  "country",
+  "emergency_contact_section",
+  "emergency_contact_name",
+  "emergency_contact_relationship",
+  "emergency_contact_number",
+  "medical_alerts_section",
+  "known_allergies",
+  "allergy_status",
+  "is_active",
+  "billing_details_section",
+  "customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther\nPrefer not to say",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-\nUnknown"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "Single\nMarried\nDivorced\nWidowed\nSeparated\nOther"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "length": 20
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "length": 140
+  },
+  {
+   "fieldname": "address_line2",
+   "fieldtype": "Data",
+   "label": "Address Line 2",
+   "length": 140
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "length": 100
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "length": 100
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "PIN Code",
+   "length": 10
+  },
+  {
+   "default": "India",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "emergency_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "emergency_contact_relationship",
+   "fieldtype": "Select",
+   "label": "Relationship",
+   "options": "Parent\nSpouse\nChild\nSibling\nGuardian\nRelative\nFriend\nOther"
+  },
+  {
+   "fieldname": "emergency_contact_number",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Number",
+   "length": 20
+  },
+  {
+   "fieldname": "medical_alerts_section",
+   "fieldtype": "Section Break",
+   "label": "Medical Alerts"
+  },
+  {
+   "fieldname": "known_allergies",
+   "fieldtype": "Small Text",
+   "label": "Known Allergies"
+  },
+  {
+   "default": "Not Assessed",
+   "fieldname": "allergy_status",
+   "fieldtype": "Select",
+   "label": "Allergy Status",
+   "options": "Not Assessed\nNo Known Allergies\nAllergies Reported",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "alternate_mobile_number",
+   "fieldtype": "Data",
+   "label": "Alternate Mobile Number",
+   "length": 20
+  },
+  {
+   "fieldname": "billing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "description": "Linked ERPNext customer account for patient billing",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "ERPNext Customer",
+   "options": "Customer"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-20 18:14:25.792919",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Patient",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}

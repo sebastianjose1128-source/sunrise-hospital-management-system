@@ -53,3 +53,14 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
+
+# Local backup files
+*.backup
+*.bak
+*.old
+
+# Frappe site data and database backups
+sites/
+site_config.json
+*.sql
+*.sql.gz

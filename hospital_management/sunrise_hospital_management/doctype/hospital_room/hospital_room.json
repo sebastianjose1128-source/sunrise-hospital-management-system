@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "field:room_number",
+ "creation": "2026-11-21 18:08:47.757035",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_details",
+  "room_number",
+  "room_type",
+  "floor",
+  "department",
+  "daily_charge",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_details",
+   "fieldtype": "Section Break",
+   "label": "Room Details"
+  },
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "General\nSemi-Private\nPrivate\nICU\nIsolation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Floor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Hospital Department"
+  },
+  {
+   "default": "0",
+   "fieldname": "daily_charge",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Daily Charge",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-21 18:27:31.543983",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Hospital Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "room_number"
+}

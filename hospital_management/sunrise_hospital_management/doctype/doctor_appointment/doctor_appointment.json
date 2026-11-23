@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "APT-.#####",
+ "creation": "2026-11-20 16:00:11.632541",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment_details_section",
+  "patient",
+  "appointment_date",
+  "appointment_time",
+  "appointment_type",
+  "doctor_details_section",
+  "department",
+  "doctor",
+  "consultation_fee",
+  "appointment_status",
+  "visit_information_section",
+  "reason_for_visit",
+  "appointment_notes",
+  "billing_information_section",
+  "sales_invoice",
+  "payment_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Appointment Details"
+  },
+  {
+   "description": "\tSelect the registered patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "description": "Select the scheduled appointment date",
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Appointment Date",
+   "reqd": 1
+  },
+  {
+   "description": "Select the scheduled appointment time",
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Appointment Time",
+   "reqd": 1
+  },
+  {
+   "default": "New Consultation",
+   "description": "Select the type of appointment",
+   "fieldname": "appointment_type",
+   "fieldtype": "Select",
+   "label": "Appointment Type",
+   "options": "New Consultation\nFollow-up\nReview",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Doctor Details"
+  },
+  {
+   "description": "Select the department for the appointment",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Hospital Department",
+   "reqd": 1
+  },
+  {
+   "description": "Select the doctor for the appointment",
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "description": "Consultation fee fetched from the selected doctor",
+   "fetch_from": "doctor.consultation_fee",
+   "fetch_if_empty": 1,
+   "fieldname": "consultation_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Consultation Fee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Current status of the doctor appointment",
+   "fieldname": "appointment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Appointment Status",
+   "options": "Scheduled\nConfirmed\nChecked In\nCompleted\nCancelled\nNo Show",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_information_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Information"
+  },
+  {
+   "description": "Enter the primary reason for the patient's appointment",
+   "fieldname": "reason_for_visit",
+   "fieldtype": "Small Text",
+   "label": "Reason for Visit",
+   "reqd": 1
+  },
+  {
+   "description": "Additional notes related to the appointment",
+   "fieldname": "appointment_notes",
+   "fieldtype": "Small Text",
+   "label": "Appointment Notes"
+  },
+  {
+   "fieldname": "billing_information_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Information"
+  },
+  {
+   "description": "Sales Invoice generated for this appointment",
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "default": "Not Billed",
+   "description": "Current payment status of the appointment",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Status",
+   "options": "Not Billed\nUnpaid\nPartially Paid\nPaid",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-20 17:53:03.625144",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Doctor Appointment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

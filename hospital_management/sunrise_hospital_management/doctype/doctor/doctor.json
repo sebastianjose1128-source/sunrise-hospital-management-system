@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "field:doctor_code",
+ "creation": "2026-11-20 13:55:28.495366",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctor_details_section",
+  "doctor_name",
+  "doctor_code",
+  "department",
+  "qualification",
+  "specialization",
+  "medical_registration_number",
+  "years_of_experience",
+  "consultation_fee",
+  "phone_number",
+  "email",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Doctor Details"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Doctor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor_code",
+   "fieldtype": "Data",
+   "label": "Doctor Code",
+   "length": 15,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Hospital Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "Qualification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "label": "Specialization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "medical_registration_number",
+   "fieldtype": "Data",
+   "label": "Medical Registration Number",
+   "length": 30,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "years_of_experience",
+   "fieldtype": "Int",
+   "label": "Years of Experience",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "consultation_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Consultation Fee",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "length": 20
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-23 11:46:13.410924",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Doctor",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "doctor_name"
+}

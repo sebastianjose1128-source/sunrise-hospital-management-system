@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "MU-.YYYY.-.#####",
+ "creation": "2026-11-22 00:26:01.866898",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "medicine_details",
+  "amended_from",
+  "patient_admission",
+  "patient",
+  "doctor",
+  "item_code",
+  "warehouse",
+  "batch_no",
+  "qty",
+  "rate",
+  "total_medicine_charges",
+  "stock_entry",
+  "usage_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Medicine Usage",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "medicine_details",
+   "fieldtype": "Section Break",
+   "label": "Medicine Details"
+  },
+  {
+   "fieldname": "patient_admission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Admission",
+   "options": "Patient Admission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medicine Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch Number",
+   "options": "Batch",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Unit Rate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_medicine_charges",
+   "fieldtype": "Currency",
+   "label": "Total Medicine Charges",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "usage_date",
+   "fieldtype": "Date",
+   "label": "Usage Date",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-22 03:32:47.140882",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Medicine Usage",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient"
+}

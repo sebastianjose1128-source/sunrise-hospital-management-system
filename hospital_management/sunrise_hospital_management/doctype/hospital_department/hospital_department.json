@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "autoname": "field:department_code",
+ "creation": "2026-11-20 12:25:35.147226",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "department_details_section",
+  "department_name",
+  "department_category",
+  "department_code",
+  "default_consultation_fee",
+  "contact_number",
+  "email",
+  "description",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "department_details_section",
+   "fieldtype": "Section Break",
+   "label": "Department Details"
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_category",
+   "fieldtype": "Select",
+   "label": "Department Category",
+   "options": "Clinical\nDiagnostic\nSupport\nAdministrative",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_code",
+   "fieldtype": "Data",
+   "label": "Department Code",
+   "length": 10,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "default_consultation_fee",
+   "fieldtype": "Currency",
+   "label": "Default Consultation Fee",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "length": 15
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-23 11:45:21.371512",
+ "modified_by": "Administrator",
+ "module": "Sunrise Hospital Management",
+ "name": "Hospital Department",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "department_name"
+}
